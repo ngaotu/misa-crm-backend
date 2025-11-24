@@ -1,0 +1,15 @@
+D:\Workspace\base\MISA.Fresher\MISA.Fresher.Infrastructure\obj\Debug\net8.0\MISA.Fresher.Infrastructure.csproj.AssemblyReference.cache
+D:\Workspace\base\MISA.Fresher\MISA.Fresher.Infrastructure\obj\Debug\net8.0\MISA.Fresher.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\Workspace\base\MISA.Fresher\MISA.Fresher.Infrastructure\obj\Debug\net8.0\MISA.Fresher.Infrastructure.AssemblyInfoInputs.cache
+D:\Workspace\base\MISA.Fresher\MISA.Fresher.Infrastructure\obj\Debug\net8.0\MISA.Fresher.Infrastructure.AssemblyInfo.cs
+D:\Workspace\base\MISA.Fresher\MISA.Fresher.Infrastructure\obj\Debug\net8.0\MISA.Fresher.Infrastructure.csproj.CoreCompileInputs.cache
+D:\Workspace\base\MISA.Fresher\MISA.Fresher.Infrastructure\bin\Debug\net8.0\MISA.Fresher.Infrastructure.deps.json
+D:\Workspace\base\MISA.Fresher\MISA.Fresher.Infrastructure\bin\Debug\net8.0\MISA.Fresher.Infrastructure.dll
+D:\Workspace\base\MISA.Fresher\MISA.Fresher.Infrastructure\bin\Debug\net8.0\MISA.Fresher.Infrastructure.pdb
+D:\Workspace\base\MISA.Fresher\MISA.Fresher.Infrastructure\bin\Debug\net8.0\MISA.Fresher.Core.dll
+D:\Workspace\base\MISA.Fresher\MISA.Fresher.Infrastructure\bin\Debug\net8.0\MISA.Fresher.Core.pdb
+D:\Workspace\base\MISA.Fresher\MISA.Fresher.Infrastructure\obj\Debug\net8.0\MISA.Fre.F5F9D9EA.Up2Date
+D:\Workspace\base\MISA.Fresher\MISA.Fresher.Infrastructure\obj\Debug\net8.0\MISA.Fresher.Infrastructure.dll
+D:\Workspace\base\MISA.Fresher\MISA.Fresher.Infrastructure\obj\Debug\net8.0\refint\MISA.Fresher.Infrastructure.dll
+D:\Workspace\base\MISA.Fresher\MISA.Fresher.Infrastructure\obj\Debug\net8.0\MISA.Fresher.Infrastructure.pdb
+D:\Workspace\base\MISA.Fresher\MISA.Fresher.Infrastructure\obj\Debug\net8.0\ref\MISA.Fresher.Infrastructure.dll

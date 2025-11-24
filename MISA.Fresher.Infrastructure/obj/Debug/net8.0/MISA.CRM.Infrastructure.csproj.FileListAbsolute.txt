@@ -1,0 +1,15 @@
+D:\Workspace\base\MISA.Fresher\MISA.Fresher.Infrastructure\obj\Debug\net8.0\MISA.CRM.Infrastructure.csproj.AssemblyReference.cache
+D:\Workspace\base\MISA.Fresher\MISA.Fresher.Infrastructure\obj\Debug\net8.0\MISA.CRM.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\Workspace\base\MISA.Fresher\MISA.Fresher.Infrastructure\obj\Debug\net8.0\MISA.CRM.Infrastructure.AssemblyInfoInputs.cache
+D:\Workspace\base\MISA.Fresher\MISA.Fresher.Infrastructure\obj\Debug\net8.0\MISA.CRM.Infrastructure.AssemblyInfo.cs
+D:\Workspace\base\MISA.Fresher\MISA.Fresher.Infrastructure\obj\Debug\net8.0\MISA.CRM.Infrastructure.csproj.CoreCompileInputs.cache
+D:\Workspace\base\MISA.Fresher\MISA.Fresher.Infrastructure\bin\Debug\net8.0\MISA.CRM.Infrastructure.deps.json
+D:\Workspace\base\MISA.Fresher\MISA.Fresher.Infrastructure\bin\Debug\net8.0\MISA.CRM.Infrastructure.dll
+D:\Workspace\base\MISA.Fresher\MISA.Fresher.Infrastructure\bin\Debug\net8.0\MISA.CRM.Infrastructure.pdb
+D:\Workspace\base\MISA.Fresher\MISA.Fresher.Infrastructure\bin\Debug\net8.0\MISA.CRM.Core.dll
+D:\Workspace\base\MISA.Fresher\MISA.Fresher.Infrastructure\bin\Debug\net8.0\MISA.CRM.Core.pdb
+D:\Workspace\base\MISA.Fresher\MISA.Fresher.Infrastructure\obj\Debug\net8.0\MISA.CRM.000793EE.Up2Date
+D:\Workspace\base\MISA.Fresher\MISA.Fresher.Infrastructure\obj\Debug\net8.0\MISA.CRM.Infrastructure.dll
+D:\Workspace\base\MISA.Fresher\MISA.Fresher.Infrastructure\obj\Debug\net8.0\refint\MISA.CRM.Infrastructure.dll
+D:\Workspace\base\MISA.Fresher\MISA.Fresher.Infrastructure\obj\Debug\net8.0\MISA.CRM.Infrastructure.pdb
+D:\Workspace\base\MISA.Fresher\MISA.Fresher.Infrastructure\obj\Debug\net8.0\ref\MISA.CRM.Infrastructure.dll

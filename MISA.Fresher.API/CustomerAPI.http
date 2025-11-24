@@ -1,0 +1,76 @@
+### Customer API Examples
+
+# 1. Get all customers with pagination (default: page=1, pageSize=10)
+GET {{baseUrl}}/api/customer
+Accept: application/json
+
+###
+
+# 2. Get customers with filtering and pagination
+GET {{baseUrl}}/api/customer?page=1&pageSize=20&sortBy=CustomerFullName&sortDirection=asc&search=John
+Accept: application/json
+
+###
+
+# 3. Get customers with specific filters
+GET {{baseUrl}}/api/customer?customerName=John&customerEmail=john@example.com&customerPhone=123456789&page=1&pageSize=10
+Accept: application/json
+
+###
+
+# 4. Get customer by ID
+GET {{baseUrl}}/api/customer/{{customerId}}
+Accept: application/json
+
+###
+
+# 5. Create new customer
+POST {{baseUrl}}/api/customer
+Content-Type: application/json
+
+{
+  "customerCode": "",
+  "customerFullName": "John Doe",
+  "customerTaxCode": "123456789",
+  "customerEmail": "john.doe@example.com",
+  "customerPhone": "0987654321",
+  "customerTypeId": "550e8400-e29b-41d4-a716-446655440000",
+"customerShippingAddr": "123 Main St, City, Country",
+  "customerLastPurchaseDate": "2024-01-15"
+}
+
+###
+
+# 6. Update customer
+PUT {{baseUrl}}/api/customer/{{customerId}}
+Content-Type: application/json
+
+{
+  "customerId": "{{customerId}}",
+  "customerCode": "KH202401123456",
+  "customerFullName": "John Doe Updated",
+  "customerTaxCode": "123456789",
+  "customerEmail": "john.doe.updated@example.com",
+  "customerPhone": "0987654321",
+  "customerTypeId": "550e8400-e29b-41d4-a716-446655440000",
+  "customerShippingAddr": "456 Updated St, City, Country",
+  "customerLastPurchaseDate": "2024-01-20"
+}
+
+###
+
+# 7. Delete customer (soft delete)
+DELETE {{baseUrl}}/api/customer/{{customerId}}
+Accept: application/json
+
+###
+
+# 8. Search customers by keyword
+GET {{baseUrl}}/api/customer/search?searchTerm=John
+Accept: application/json
+
+###
+
+# Variables (replace with actual values)
+@baseUrl = https://localhost:7001
+@customerId = 550e8400-e29b-41d4-a716-446655440000

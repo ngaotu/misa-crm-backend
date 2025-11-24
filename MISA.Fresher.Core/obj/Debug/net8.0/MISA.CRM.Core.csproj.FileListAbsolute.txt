@@ -1,0 +1,12 @@
+D:\Workspace\base\MISA.Fresher\MISA.Fresher.Core\bin\Debug\net8.0\MISA.CRM.Core.deps.json
+D:\Workspace\base\MISA.Fresher\MISA.Fresher.Core\bin\Debug\net8.0\MISA.CRM.Core.dll
+D:\Workspace\base\MISA.Fresher\MISA.Fresher.Core\bin\Debug\net8.0\MISA.CRM.Core.pdb
+D:\Workspace\base\MISA.Fresher\MISA.Fresher.Core\obj\Debug\net8.0\MISA.CRM.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\Workspace\base\MISA.Fresher\MISA.Fresher.Core\obj\Debug\net8.0\MISA.CRM.Core.AssemblyInfoInputs.cache
+D:\Workspace\base\MISA.Fresher\MISA.Fresher.Core\obj\Debug\net8.0\MISA.CRM.Core.AssemblyInfo.cs
+D:\Workspace\base\MISA.Fresher\MISA.Fresher.Core\obj\Debug\net8.0\MISA.CRM.Core.csproj.CoreCompileInputs.cache
+D:\Workspace\base\MISA.Fresher\MISA.Fresher.Core\obj\Debug\net8.0\MISA.CRM.Core.dll
+D:\Workspace\base\MISA.Fresher\MISA.Fresher.Core\obj\Debug\net8.0\refint\MISA.CRM.Core.dll
+D:\Workspace\base\MISA.Fresher\MISA.Fresher.Core\obj\Debug\net8.0\MISA.CRM.Core.pdb
+D:\Workspace\base\MISA.Fresher\MISA.Fresher.Core\obj\Debug\net8.0\ref\MISA.CRM.Core.dll
+D:\Workspace\base\MISA.Fresher\MISA.Fresher.Core\obj\Debug\net8.0\MISA.CRM.Core.csproj.AssemblyReference.cache

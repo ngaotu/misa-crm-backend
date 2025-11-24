@@ -1,0 +1,6 @@
+@MISA.Fresher.API_HostAddress = http://localhost:5198
+
+GET {{MISA.Fresher.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
