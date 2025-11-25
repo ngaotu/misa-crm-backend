@@ -9,6 +9,23 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MISA.CRM.Core", "MISA.Fresh
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MISA.CRM.Infrastructure", "MISA.Fresher.Infrastructure\MISA.CRM.Infrastructure.csproj", "{183D6AC9-1A17-4B26-BD3F-749F37559148}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sql", "Sql", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tables", "Tables", "{BE507CB2-CD5C-4B62-8941-43A36C0A5952}"
+	ProjectSection(SolutionItems) = preProject
+		customer.sql = customer.sql
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Procedures", "Procedures", "{4B65DDEB-7880-40A4-8417-77B0830AF5AC}"
+	ProjectSection(SolutionItems) = preProject
+		proc_get_customers_paging_and_sort.sql = proc_get_customers_paging_and_sort.sql
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,6 +47,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BE507CB2-CD5C-4B62-8941-43A36C0A5952} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{4B65DDEB-7880-40A4-8417-77B0830AF5AC} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FDFF591F-276B-451C-97E8-DACCEFCBFD83}

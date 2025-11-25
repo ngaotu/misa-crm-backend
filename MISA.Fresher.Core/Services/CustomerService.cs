@@ -42,7 +42,7 @@ namespace MISA.CRM.Core.Services
         /// <param name="sortBy">Cột sắp xếp</param>
         /// <param name="sortDirection">Hướng sắp xếp</param>
         /// <returns>Kết quả phân trang khách hàng</returns>
-        /// Created By: NTT (15/11/2025)
+        /// Created By: NTT (16/11/2025)
         public PagedResult<Customer> GetPagedCustomers(string? search = null, int page = 1, int pageSize = 10, string? sortBy = null, string? sortDirection = null)
         {
             var pagedResult = _customerRepository.GetPagedCustomers(search, page, pageSize, sortBy, sortDirection);
@@ -55,7 +55,7 @@ namespace MISA.CRM.Core.Services
         /// </summary>
         /// <param name="customerIds">Danh sách ID khách hàng cần export</param>
         /// <returns>File CSV dưới dạng byte array</returns>
-        /// Created By: NTT (15/11/2025)
+        /// Created By: NTT (16/11/2025)
         public byte[] ExportCustomersToCSV(List<Guid> customerIds)
         {
             var customers = _customerRepository.GetByIds(customerIds);
@@ -103,7 +103,7 @@ namespace MISA.CRM.Core.Services
         /// </summary>
         /// <param name="csvFile">File CSV upload từ client</param>
         /// <returns>Kết quả import với thống kê và danh sách lỗi chi tiết</returns>
-        /// Created By: NTT (15/11/2025)
+        /// Created By: NTT (16/11/2025)
         public ImportResult ImportCustomersFromCSV(IFormFile csvFile)
         {
             var result = new ImportResult();
@@ -122,7 +122,7 @@ namespace MISA.CRM.Core.Services
                 rowNumber++;
                 result.TotalRows++;
 
-                // Build a DTO for error reporting if needed
+                // Build a DTO for error reporting
                 var dto = new CustomerImportDto
                 {
                     RowNumber = rowNumber,
@@ -214,7 +214,7 @@ namespace MISA.CRM.Core.Services
         /// <param name="csv">CsvReader</param>
         /// <param name="fieldName">Tên cột</param>
         /// <returns>Giá trị field hoặc null</returns>
-        /// Created By: NTT (15/11/2025)
+        /// Created By: NTT (16/11/2025)
         private string? GetFieldSafe(CsvReader csv, string fieldName)
         {
             try
@@ -232,7 +232,7 @@ namespace MISA.CRM.Core.Services
         /// </summary>
         /// <param name="dateString">Chuỗi ngày tháng</param>
         /// <returns>Giá trị DateTime hoặc null nếu không hợp lệ</returns>
-        /// Created By: NTT (15/11/2025)
+        /// Created By: NTT (16/11/2025)
         private DateTime? ParseDateSafe(string? dateString)
         {
             if (string.IsNullOrWhiteSpace(dateString))

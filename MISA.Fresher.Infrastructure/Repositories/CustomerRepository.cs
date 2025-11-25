@@ -18,8 +18,7 @@ namespace MISA.CRM.Infrastructure.Repositories
         }
 
         /// <summary>
-        /// 🔹 API CHÍNH - Lấy danh sách khách hàng có phân trang + sắp xếp + tìm kiếm chung
-        /// Đơn giản hóa - truyền trực tiếp parameters
+        ///  Lấy danh sách khách hàng có phân trang + sắp xếp + tìm kiếm chung
         /// </summary>
         /// <param name="search">Từ khóa tìm kiếm chung</param>
         /// <param name="page">Trang hiện tại</param>
@@ -27,11 +26,11 @@ namespace MISA.CRM.Infrastructure.Repositories
         /// <param name="sortBy">Cột sắp xếp</param>
         /// <param name="sortDirection">Hướng sắp xếp</param>
         /// <returns>Kết quả phân trang khách hàng</returns>
-        /// CreatedBy: NTT(19/11/2025)
+        /// CreatedBy: NTT(16/11/2025)
         public PagedResult<Customer> GetPagedCustomers(string? search = null, int page = 1, int pageSize = 10, string? sortBy = null, string? sortDirection = null)
         {
             using (var multi = dbConnection.QueryMultiple(
-                "proc_get_all_customers",
+                "proc_customers_paging_and_sort",
                 new
                 {
                     p_query = search,
@@ -87,7 +86,7 @@ namespace MISA.CRM.Infrastructure.Repositories
         /// </summary>
         /// <param name="customerIds">Danh sách Id khách hàng</param>
         /// <returns>Danh sách khách hàng</returns>
-        /// CreatedBy: NTT (19/11/2025)
+        /// CreatedBy: NTT (16/11/2025)
         public List<Customer> GetByIds(List<Guid> customerIds)
         {
             if (customerIds == null || customerIds.Count == 0) return new List<Customer>();
