@@ -49,8 +49,7 @@ builder.Services.AddScoped<ICustomerService, CustomerService>();
 builder.Services.AddScoped(typeof(IBaseService<>), typeof(BaseService<>));
 builder.Services.AddScoped(typeof(IBaseRepository<>), typeof(BaseRepository<>));
 
-// File storage - register implementation from Infrastructure project
-builder.Services.AddScoped<IFileStorageService, MISA.CRM.Infrastructure.Services.LocalFileStorageService>();
+builder.Services.AddScoped<IFileStorageService, LocalFileStorageService>();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -70,29 +69,6 @@ if (app.Environment.IsDevelopment())
 // Enable CORS - PHẢI đặt trước UseAuthorization
 app.UseCors("VueJsPolicy");
 
-// Seed data CSV file when running in Development only
-if (app.Environment.IsDevelopment())
-{
-    try
-    {
-        var seedPath = Path.Combine(app.Environment.ContentRootPath, "customers_seed3.csv");
-        // Generate2000 records by default (adjust as needed)
-        CustomerSeeder.GenerateCsv(1000, seedPath);
-        Console.WriteLine($"Customer seed CSV generated: {seedPath}");
-    }
-    catch (Exception ex)
-    {
-        Console.WriteLine($"Failed to generate seed CSV: {ex.Message}");
-    }
-
-    // If SEED_ONLY env var is set to1, exit after seeding (one-off run)
-    var seedOnly = Environment.GetEnvironmentVariable("SEED_ONLY");
-    if (!string.IsNullOrEmpty(seedOnly) && seedOnly == "1")
-    {
-        Console.WriteLine("SEED_ONLY=1 detected, exiting after seeding.");
-        return;
-    }
-}
 
 app.UseHttpsRedirection();
 

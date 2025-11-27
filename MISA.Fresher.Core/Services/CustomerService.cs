@@ -73,11 +73,10 @@ namespace MISA.CRM.Core.Services
                 csv.WriteField(customer.CustomerCode ?? "");
                 csv.WriteField(customer.CustomerFullName ?? "");
                 csv.WriteField(customer.CustomerEmail ?? "");
-                // Thêm dấu phẩy đầu để Excel giữ số0 đầu
-                csv.WriteField(!string.IsNullOrEmpty(customer.CustomerPhone) ? $",{customer.CustomerPhone}" : "");
+                csv.WriteField(!string.IsNullOrEmpty(customer.CustomerPhone) ? $"'{customer.CustomerPhone}" : "");
                 csv.WriteField(customer.CustomerType ?? "");
                 csv.WriteField(customer.CustomerShippingAddr ?? "");
-                csv.WriteField(!string.IsNullOrEmpty(customer.CustomerTaxCode) ? $",{customer.CustomerTaxCode}" : "");
+                csv.WriteField(!string.IsNullOrEmpty(customer.CustomerTaxCode) ? $"'{customer.CustomerTaxCode}" : "");
                 csv.WriteField(customer.CustomerLastPurchaseDate.HasValue && customer.CustomerLastPurchaseDate.Value != DateTime.MinValue
                  ? customer.CustomerLastPurchaseDate.Value.ToString("dd/MM/yyyy")
                  : "");
@@ -152,24 +151,21 @@ namespace MISA.CRM.Core.Services
                         continue; // Skip this row
                     }
 
-                    // Làm sạch phone và taxcode trước khi lưu
                     var customer = new Customer
                     {
                         CustomerId = Guid.NewGuid(),
-                        // KHÔNG gán CustomerCode từ file, để hệ thống tự sinh
                         CustomerFullName = string.IsNullOrWhiteSpace(dto.FullName) ? null : dto.FullName.Trim(),
                         CustomerPhone = CleanString(dto.Phone),
                         CustomerEmail = CleanString(dto.Email),
                         CustomerShippingAddr = CleanString(dto.Address),
                         CustomerType = CleanString(dto.CustomerType),
                         CustomerTaxCode = CleanString(dto.TaxCode),
-                        CustomerLastPurchaseDate = dto.LastPurchaseDate ?? DateTime.MinValue,
+                        CustomerLastPurchaseDate = dto.LastPurchaseDate,
                         CustomerPurchasedItems = CleanString(dto.PurchasedItems),
                         CustomerLastestPurchasedItems = CleanString(dto.LatestPurchasedItems),
                         IsDeleted = false
                     };
 
-                    // Insert immediately to avoid keeping many items in memory
                     Insert(customer);
                     result.SuccessCount++;
                 }

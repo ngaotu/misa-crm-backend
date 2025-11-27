@@ -220,5 +220,30 @@ curl -X PUT "{{baseUrl}}/api/customer/{id}/with-file" \
 ```
 - Behavior: nếu upload avatar mới, server lưu file mới và xóa file cũ (nếu khác); nếu không upload file, avatar giữ nguyên.
 
----
+### SEED DATA (Development environment)
+- File mẫu: `customers_seed.csv` trong thư mục gốc project API.
+- // Seed data CSV file when running in Development only
+if (app.Environment.IsDevelopment())
+{
+    try
+    {
+        var seedPath = Path.Combine(app.Environment.ContentRootPath, "customers_seed3.csv");
+        // Generate2000 records by default (adjust as needed)
+        CustomerSeeder.GenerateCsv(1000, seedPath);
+        Console.WriteLine($"Customer seed CSV generated: {seedPath}");
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"Failed to generate seed CSV: {ex.Message}");
+    }
+
+    // If SEED_ONLY env var is set to1, exit after seeding (one-off run)
+    var seedOnly = Environment.GetEnvironmentVariable("SEED_ONLY");
+    if (!string.IsNullOrEmpty(seedOnly) && seedOnly == "1")
+    {
+        Console.WriteLine("SEED_ONLY=1 detected, exiting after seeding.");
+        return;
+    }
+}
+
 

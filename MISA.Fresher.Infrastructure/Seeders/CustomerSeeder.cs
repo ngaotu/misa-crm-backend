@@ -118,9 +118,9 @@ namespace MISA.CRM.Infrastructure.Seeders
                 var purchased = phoneFaker.Random.ArrayElement(new[] { "LAPTOP", "XEMAY", "DIENTHOAI", "BANPHIM", "TUISACH" });
                 var latest = purchased.ToLower();
 
-                // Format phone and taxCode as leading comma + value (per previous request)
-                string phoneForCsv = string.IsNullOrWhiteSpace(phone) ? string.Empty : "," + phone;
-                string taxCodeForCsv = string.IsNullOrWhiteSpace(taxCodeRaw) ? string.Empty : "," + taxCodeRaw;
+                // Format phone and taxCode using leading single quote to preserve leading zeros in Excel
+                string phoneForCsv = string.IsNullOrWhiteSpace(phone) ? string.Empty : "'" + phone;
+                string taxCodeForCsv = string.IsNullOrWhiteSpace(taxCodeRaw) ? string.Empty : "'" + taxCodeRaw;
 
                 string Escape(string s) => s == null ? string.Empty : (s.Contains(',') || s.Contains('"') ? "\"" + s.Replace("\"", "\"\"") + "\"" : s);
 

@@ -46,7 +46,7 @@ namespace MISA.CRM.Infrastructure.Services
         /// <param name="folder">Thư mục tương đối bên trong root (ví dụ: "uploads/avatars")</param>
         /// <returns>Relative url hoặc null nếu file null</returns>
         /// CreatedBy: NTT (21/11/2025)
-        public async Task<string?> SaveFileAsync(IFormFile file, string folder)
+        public string? SaveFile(IFormFile file, string folder)
         {
             if (file == null || file.Length == 0) return null;
 
@@ -60,7 +60,7 @@ namespace MISA.CRM.Infrastructure.Services
 
             using (var stream = new FileStream(filePath, FileMode.Create))
             {
-                await file.CopyToAsync(stream);
+                file.CopyTo(stream);
             }
 
             var relativeUrl = $"/{folder.Trim('\'', '/')}/{fileName}".Replace("\\", "/");
@@ -71,17 +71,15 @@ namespace MISA.CRM.Infrastructure.Services
         /// Xóa file theo đường dẫn relative
         /// </summary>
         /// <param name="relativePath">Đường dẫn relative (ví dụ: /uploads/avatars/xxx.png)</param>
-        /// <returns>Task hoàn thành khi xóa xong</returns>
         /// CreatedBy: NTT (21/11/2025)
-        public Task DeleteFileAsync(string? relativePath)
+        public void DeleteFile(string? relativePath)
         {
             if (string.IsNullOrWhiteSpace(relativePath))
-                return Task.CompletedTask;
+                return;
 
             var uploadsRoot = GetRootPath();
             var fullPath = Path.Combine(uploadsRoot, relativePath.TrimStart('/').Replace("/", Path.DirectorySeparatorChar.ToString()));
             if (File.Exists(fullPath)) File.Delete(fullPath);
-            return Task.CompletedTask;
         }
     }
 }

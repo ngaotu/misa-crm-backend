@@ -2,7 +2,7 @@
   {
     "ContainingType": "MISA.CRM.API.Controllers.MisaBaseController\u00601[[MISA.CRM.Core.Entities.Customer, MISA.CRM.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
     "Method": "Get",
-    "RelativePath": "api/Customer",
+    "RelativePath": "api/Customers",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -12,7 +12,7 @@
   {
     "ContainingType": "MISA.CRM.API.Controllers.MisaBaseController\u00601[[MISA.CRM.Core.Entities.Customer, MISA.CRM.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
     "Method": "Post",
-    "RelativePath": "api/Customer",
+    "RelativePath": "api/Customers",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -28,7 +28,7 @@
   {
     "ContainingType": "MISA.CRM.API.Controllers.MisaBaseController\u00601[[MISA.CRM.Core.Entities.Customer, MISA.CRM.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
     "Method": "GetById",
-    "RelativePath": "api/Customer/{id}",
+    "RelativePath": "api/Customers/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -44,7 +44,7 @@
   {
     "ContainingType": "MISA.CRM.API.Controllers.MisaBaseController\u00601[[MISA.CRM.Core.Entities.Customer, MISA.CRM.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
     "Method": "Put",
-    "RelativePath": "api/Customer/{id}",
+    "RelativePath": "api/Customers/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -65,7 +65,7 @@
   {
     "ContainingType": "MISA.CRM.API.Controllers.MisaBaseController\u00601[[MISA.CRM.Core.Entities.Customer, MISA.CRM.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
     "Method": "Delete",
-    "RelativePath": "api/Customer/{id}",
+    "RelativePath": "api/Customers/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -79,9 +79,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "MISA.CRM.API.Controllers.CustomerController",
+    "ContainingType": "MISA.CRM.API.Controllers.CustomersController",
     "Method": "PutWithFile",
-    "RelativePath": "api/Customer/{id}/with-file",
+    "RelativePath": "api/Customers/{id}/with-file",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -165,9 +165,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "MISA.CRM.API.Controllers.CustomerController",
+    "ContainingType": "MISA.CRM.API.Controllers.CustomersController",
     "Method": "BulkAssignType",
-    "RelativePath": "api/Customer/bulk-assign-type",
+    "RelativePath": "api/Customers/bulk-assign-type",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -181,9 +181,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "MISA.CRM.API.Controllers.CustomerController",
+    "ContainingType": "MISA.CRM.API.Controllers.CustomersController",
     "Method": "BulkDelete",
-    "RelativePath": "api/Customer/bulk-delete",
+    "RelativePath": "api/Customers/bulk-delete",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -197,9 +197,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "MISA.CRM.API.Controllers.CustomerController",
+    "ContainingType": "MISA.CRM.API.Controllers.CustomersController",
     "Method": "CheckDuplicateEmail",
-    "RelativePath": "api/Customer/check-duplicate/email",
+    "RelativePath": "api/Customers/check-duplicate/email",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -218,9 +218,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "MISA.CRM.API.Controllers.CustomerController",
+    "ContainingType": "MISA.CRM.API.Controllers.CustomersController",
     "Method": "CheckDuplicatePhone",
-    "RelativePath": "api/Customer/check-duplicate/phone",
+    "RelativePath": "api/Customers/check-duplicate/phone",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -239,9 +239,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "MISA.CRM.API.Controllers.CustomerController",
+    "ContainingType": "MISA.CRM.API.Controllers.CustomersController",
     "Method": "ExportCSV",
-    "RelativePath": "api/Customer/export",
+    "RelativePath": "api/Customers/export",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -257,7 +257,7 @@
   {
     "ContainingType": "MISA.CRM.API.Controllers.MisaBaseController\u00601[[MISA.CRM.Core.Entities.Customer, MISA.CRM.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
     "Method": "GenerateCode",
-    "RelativePath": "api/Customer/generate-code",
+    "RelativePath": "api/Customers/generate-code",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -265,9 +265,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "MISA.CRM.API.Controllers.CustomerController",
+    "ContainingType": "MISA.CRM.API.Controllers.CustomersController",
     "Method": "ImportCSV",
-    "RelativePath": "api/Customer/import",
+    "RelativePath": "api/Customers/import",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -281,9 +281,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "MISA.CRM.API.Controllers.CustomerController",
+    "ContainingType": "MISA.CRM.API.Controllers.CustomersController",
     "Method": "Get",
-    "RelativePath": "api/Customer/paging",
+    "RelativePath": "api/Customers/paging",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -317,9 +317,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "MISA.CRM.API.Controllers.CustomerController",
+    "ContainingType": "MISA.CRM.API.Controllers.CustomersController",
     "Method": "PostWithFile",
-    "RelativePath": "api/Customer/with-file",
+    "RelativePath": "api/Customers/with-file",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,

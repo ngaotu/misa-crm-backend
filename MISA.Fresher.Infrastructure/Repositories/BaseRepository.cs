@@ -203,6 +203,13 @@ namespace MISA.CRM.Infrastructure.Repositories
         /// CreatedBy: NTT (15/11/2025)
         protected string GetTableName()
         {
+            // Nếu entity type có attribute TableNameAttribute thì dùng tên trong attribute
+            var tableAttr = typeof(T).GetCustomAttribute<TableNameAttribute>();
+            if (tableAttr != null && !string.IsNullOrWhiteSpace(tableAttr.Name))
+            {
+                return tableAttr.Name;
+            }
+
             return typeof(T).Name.ToLower();
         }
         /// <summary>

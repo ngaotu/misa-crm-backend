@@ -14,15 +14,18 @@ IN p_sort_direction varchar(4))
 BEGIN
   -- ================================
   -- Author: tungnguyen
-  -- Create date: 11/7/2025
-  -- Description: <Mo ta muc dich, chuc nang>
+  -- Create date: 16/11/2025
+  -- Description: Lấy danh sách khách hàng có hỗ trợ phân trang, sắp xếp và tìm kiếm chung theo Tên, Email, SĐT.
   -- Modified by:
   -- Code chay thu: 
-  -- CALL 
+  -- CALL proc_customers_paging_and_sort('Nguyễn', 1, 10, 'CustomerFullName', 'DESC');
   -- ;
   DECLARE v_offset int DEFAULT 0;
   DECLARE v_sort_column varchar(50) DEFAULT 'customer_code';
   DECLARE v_sort_dir varchar(4) DEFAULT 'ASC';
+  DECLARE v_where_clause varchar(1000) DEFAULT ' WHERE is_deleted = 0 ';
+  DECLARE v_search_pattern varchar(257) DEFAULT NULL;
+
   -- Tính offset cho phân trang
   SET v_offset = (p_page_number - 1) * p_page_size;
 
@@ -32,43 +35,52 @@ BEGIN
   -- Xử lý sort direction
   SET v_sort_dir = CASE WHEN UPPER(p_sort_direction) = 'DESC' THEN 'DESC' ELSE 'ASC' END;
 
-  -- Danh sách customer
-  SET @sql = 'SELECT * FROM customer WHERE is_deleted = 0';
-
   -- Thêm điều kiện tìm kiếm chung
   IF p_query IS NOT NULL
     AND p_query != '' THEN
-    SET @sql = CONCAT(@sql, ' AND (
-           customer_full_name LIKE ''%', p_query, '%'' OR
-           customer_email LIKE ''%', p_query, '%'' OR  
-           customer_phone LIKE ''%', p_query, '%''
-       )');
+    -- Bọc chuỗi tìm kiếm bằng ký tự đại diện %
+    SET v_search_pattern = CONCAT('%', p_query, '%');
+
+    -- Nối điều kiện tìm kiếm vào chuỗi WHERE cơ sở. 
+    SET v_where_clause = CONCAT(v_where_clause, ' 
+            AND (
+                customer_full_name LIKE ? OR
+                customer_email LIKE ? OR
+                customer_phone LIKE ?
+            )
+        ');
+    -- Gán giá trị tham số
+    SET @p1 = v_search_pattern;
+    SET @p2 = v_search_pattern;
+    SET @p3 = v_search_pattern;
   END IF;
+
+  -- TRUY VẤN LẤY DỮ LIỆU
+  SET @sql = CONCAT('SELECT * FROM customer ', v_where_clause);
   -- Thêm sắp xếp và phân trang
   SET @sql = CONCAT(@sql, ' ORDER BY ', v_sort_column, ' ', v_sort_dir);
   SET @sql = CONCAT(@sql, ' LIMIT ', p_page_size, ' OFFSET ', v_offset);
 
   -- Thực thi query lấy dữ liệu
   PREPARE stmt FROM @sql;
-  EXECUTE stmt;
+  IF v_search_pattern IS NOT NULL THEN
+    EXECUTE stmt USING @p1, @p2, @p3;
+  ELSE
+    EXECUTE stmt;
+  END IF;
   DEALLOCATE PREPARE stmt;
 
   -- Lấy tổng số bản ghi
-  SET @count_sql = 'SELECT COUNT(*) AS TotalRecords FROM customer WHERE is_deleted = 0';
+  SET @count_sql = CONCAT('SELECT COUNT(*) AS TotalRecords FROM customer ', v_where_clause);
 
-  -- Thêm lại điều kiện tìm kiếm cho count
-  IF p_query IS NOT NULL
-    AND p_query != '' THEN
-    SET @count_sql = CONCAT(@count_sql, ' AND (
-             customer_full_name LIKE ''%', p_query, '%'' OR
-             customer_email LIKE ''%', p_query, '%'' OR  
-             customer_phone LIKE ''%', p_query, '%''
-         )');
-  END IF;
-
-  -- Thực thi query đếm
   PREPARE count_stmt FROM @count_sql;
-  EXECUTE count_stmt;
+
+  -- Thực thi an toàn: kiểm tra xem có tham số tìm kiếm không
+  IF v_search_pattern IS NOT NULL THEN
+    EXECUTE count_stmt USING @p1, @p2, @p3;
+  ELSE
+    EXECUTE count_stmt;
+  END IF;
   DEALLOCATE PREPARE count_stmt;
 
 END

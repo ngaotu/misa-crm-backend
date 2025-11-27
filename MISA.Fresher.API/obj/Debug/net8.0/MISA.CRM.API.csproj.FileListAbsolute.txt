@@ -50,3 +50,4 @@ D:\Workspace\base\MISA.Fresher\MISA.Fresher.API\bin\Debug\net8.0\Microsoft.Exten
 D:\Workspace\base\MISA.Fresher\MISA.Fresher.API\bin\Debug\net8.0\Microsoft.Extensions.Hosting.Abstractions.dll
 D:\Workspace\base\MISA.Fresher\MISA.Fresher.API\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
 D:\Workspace\base\MISA.Fresher\MISA.Fresher.API\bin\Debug\net8.0\Bogus.dll
+D:\Workspace\base\MISA.Fresher\MISA.Fresher.API\obj\Debug\net8.0\MISA.CRM.API.sourcelink.json

@@ -10,3 +10,4 @@ D:\Workspace\base\MISA.Fresher\MISA.Fresher.Core\obj\Debug\net8.0\refint\MISA.CR
 D:\Workspace\base\MISA.Fresher\MISA.Fresher.Core\obj\Debug\net8.0\MISA.CRM.Core.pdb
 D:\Workspace\base\MISA.Fresher\MISA.Fresher.Core\obj\Debug\net8.0\ref\MISA.CRM.Core.dll
 D:\Workspace\base\MISA.Fresher\MISA.Fresher.Core\obj\Debug\net8.0\MISA.CRM.Core.csproj.AssemblyReference.cache
+D:\Workspace\base\MISA.Fresher\MISA.Fresher.Core\obj\Debug\net8.0\MISA.CRM.Core.sourcelink.json

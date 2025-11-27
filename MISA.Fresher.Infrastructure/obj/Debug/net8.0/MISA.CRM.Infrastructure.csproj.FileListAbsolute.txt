@@ -13,3 +13,4 @@ D:\Workspace\base\MISA.Fresher\MISA.Fresher.Infrastructure\obj\Debug\net8.0\MISA
 D:\Workspace\base\MISA.Fresher\MISA.Fresher.Infrastructure\obj\Debug\net8.0\refint\MISA.CRM.Infrastructure.dll
 D:\Workspace\base\MISA.Fresher\MISA.Fresher.Infrastructure\obj\Debug\net8.0\MISA.CRM.Infrastructure.pdb
 D:\Workspace\base\MISA.Fresher\MISA.Fresher.Infrastructure\obj\Debug\net8.0\ref\MISA.CRM.Infrastructure.dll
+D:\Workspace\base\MISA.Fresher\MISA.Fresher.Infrastructure\obj\Debug\net8.0\MISA.CRM.Infrastructure.sourcelink.json

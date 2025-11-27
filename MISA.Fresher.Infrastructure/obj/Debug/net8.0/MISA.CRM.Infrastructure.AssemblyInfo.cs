@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MISA.CRM.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+47377c6303281484c673526d23a56fc436b5baba")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a2e0757f05e3c035224646051ab67d326be6e2cf")]
 [assembly: System.Reflection.AssemblyProductAttribute("MISA.CRM.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MISA.CRM.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

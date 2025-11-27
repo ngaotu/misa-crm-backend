@@ -5,10 +5,10 @@
     "version": "1.0"
   },
   "paths": {
-    "/api/Customer/paging": {
+    "/api/Customers/paging": {
       "get": {
         "tags": [
-          "Customer"
+          "Customers"
         ],
         "parameters": [
           {
@@ -58,10 +58,10 @@
         }
       }
     },
-    "/api/Customer/with-file": {
+    "/api/Customers/with-file": {
       "post": {
         "tags": [
-          "Customer"
+          "Customers"
         ],
         "requestBody": {
           "content": {
@@ -171,10 +171,10 @@
         }
       }
     },
-    "/api/Customer/{id}/with-file": {
+    "/api/Customers/{id}/with-file": {
       "put": {
         "tags": [
-          "Customer"
+          "Customers"
         ],
         "parameters": [
           {
@@ -295,10 +295,10 @@
         }
       }
     },
-    "/api/Customer/export": {
+    "/api/Customers/export": {
       "post": {
         "tags": [
-          "Customer"
+          "Customers"
         ],
         "requestBody": {
           "content": {
@@ -338,10 +338,10 @@
         }
       }
     },
-    "/api/Customer/import": {
+    "/api/Customers/import": {
       "post": {
         "tags": [
-          "Customer"
+          "Customers"
         ],
         "requestBody": {
           "content": {
@@ -370,10 +370,10 @@
         }
       }
     },
-    "/api/Customer/bulk-assign-type": {
+    "/api/Customers/bulk-assign-type": {
       "post": {
         "tags": [
-          "Customer"
+          "Customers"
         ],
         "requestBody": {
           "content": {
@@ -401,10 +401,10 @@
         }
       }
     },
-    "/api/Customer/bulk-delete": {
+    "/api/Customers/bulk-delete": {
       "post": {
         "tags": [
-          "Customer"
+          "Customers"
         ],
         "requestBody": {
           "content": {
@@ -444,10 +444,10 @@
         }
       }
     },
-    "/api/Customer/check-duplicate/email": {
+    "/api/Customers/check-duplicate/email": {
       "get": {
         "tags": [
-          "Customer"
+          "Customers"
         ],
         "parameters": [
           {
@@ -473,10 +473,10 @@
         }
       }
     },
-    "/api/Customer/check-duplicate/phone": {
+    "/api/Customers/check-duplicate/phone": {
       "get": {
         "tags": [
-          "Customer"
+          "Customers"
         ],
         "parameters": [
           {
@@ -502,10 +502,10 @@
         }
       }
     },
-    "/api/Customer": {
+    "/api/Customers": {
       "get": {
         "tags": [
-          "Customer"
+          "Customers"
         ],
         "responses": {
           "200": {
@@ -515,7 +515,7 @@
       },
       "post": {
         "tags": [
-          "Customer"
+          "Customers"
         ],
         "requestBody": {
           "content": {
@@ -543,10 +543,10 @@
         }
       }
     },
-    "/api/Customer/{id}": {
+    "/api/Customers/{id}": {
       "get": {
         "tags": [
-          "Customer"
+          "Customers"
         ],
         "parameters": [
           {
@@ -567,7 +567,7 @@
       },
       "put": {
         "tags": [
-          "Customer"
+          "Customers"
         ],
         "parameters": [
           {
@@ -607,7 +607,7 @@
       },
       "delete": {
         "tags": [
-          "Customer"
+          "Customers"
         ],
         "parameters": [
           {
@@ -627,10 +627,10 @@
         }
       }
     },
-    "/api/Customer/generate-code": {
+    "/api/Customers/generate-code": {
       "get": {
         "tags": [
-          "Customer"
+          "Customers"
         ],
         "responses": {
           "200": {

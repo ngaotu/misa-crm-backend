@@ -12,18 +12,18 @@ using System.Collections.Generic;
 namespace MISA.CRM.API.Controllers
 {
     /// <summary>
-    /// Controller xử lý các yêu cầu liên quan đến khách hàng (Customer).
+    /// Controller xử lý các yêu cầu liên quan đến khách hàng (Customers).
     /// Sử dụng trực tiếp entity Customer kế thừa từ MisaBaseController.
     /// </summary>
     /// CreatedBy: NTT (15/11/2025)
     [Route("api/[controller]")]
     [ApiController]
-    public class CustomerController : MisaBaseController<Customer>
+    public class CustomersController : MisaBaseController<Customer>
     {
         private readonly ICustomerService _customerService;
         private readonly IFileStorageService? _fileStorage;
 
-        public CustomerController(ICustomerService customerService, IFileStorageService? fileStorage = null) : base(customerService)
+        public CustomersController(ICustomerService customerService, IFileStorageService? fileStorage = null) : base(customerService)
         {
             _customerService = customerService;
             _fileStorage = fileStorage;
@@ -64,7 +64,7 @@ namespace MISA.CRM.API.Controllers
         {
             if (avatar != null && _fileStorage is not null)
             {
-                var savedPath = _fileStorage.SaveFileAsync(avatar, "uploads/avatars").GetAwaiter().GetResult();
+                var savedPath = _fileStorage.SaveFile(avatar, "uploads/avatars");
                 customer.CustomerAvatar = savedPath;
             }
 
@@ -87,11 +87,11 @@ namespace MISA.CRM.API.Controllers
 
             if (avatar != null && _fileStorage is not null)
             {
-                var newPath = _fileStorage.SaveFileAsync(avatar, "uploads/avatars").GetAwaiter().GetResult();
+                var newPath = _fileStorage.SaveFile(avatar, "uploads/avatars");
                 // delete old if exists and different
                 if (!string.IsNullOrWhiteSpace(existing.CustomerAvatar) && existing.CustomerAvatar != newPath)
                 {
-                    _fileStorage.DeleteFileAsync(existing.CustomerAvatar).GetAwaiter().GetResult();
+                    _fileStorage.DeleteFile(existing.CustomerAvatar);
                 }
                 customer.CustomerAvatar = newPath;
             }
@@ -140,7 +140,7 @@ namespace MISA.CRM.API.Controllers
                 return BadRequest(ApiResponse<object>.Fail("Chỉ chấp nhận file CSV"));
             }
 
-            if (file.Length >10 *1024 *1024) //10MB limit
+            if (file.Length >10 *1024 *1024)
             {
                 return BadRequest(ApiResponse<object>.Fail("Kích thước file không được vượt quá10MB"));
             }
